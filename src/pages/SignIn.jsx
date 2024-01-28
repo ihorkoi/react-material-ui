@@ -24,6 +24,12 @@ const SignIn = () => {
   };
   const submitController = (evt) => {
     const data = new FormData(evt.currentTarget);
+    const req = {
+      email: data.get("email"),
+      password: data.get("password"),
+    };
+
+    dispatch(signIn(req));
     evt.preventDefault();
   };
 
