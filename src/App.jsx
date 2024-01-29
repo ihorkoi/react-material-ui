@@ -7,6 +7,8 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp.jsx";
 import { Box, ThemeProvider } from "@mui/material";
 import { theme } from "./muitheme.js";
+import { Header } from "./components/Header/Header.jsx";
+import ResponsiveAppBar from "./components/Header/Header2.jsx";
 // import bgphoto from "./img/test.jpg";
 
 class App extends Component {
@@ -24,11 +26,16 @@ class App extends Component {
       // </div>
       <ThemeProvider theme={theme}>
         <Routes>
-          <Route path="/" element={<SignIn />} />
+          <Route
+            path="/"
+            element={
+              <div>
+                <Header />
+              </div>
+            }
+          />
+          <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
-
-          {/* <Box sx={{ backgroundImage: `url(${bgphoto})` }}> */}
-          {/* </Box> */}
         </Routes>
       </ThemeProvider>
     );

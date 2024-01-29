@@ -4,9 +4,11 @@ import FormControl from "@mui/material/FormControl";
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
 import Button from "@mui/material/Button";
+import { Link as RouterLink } from "react-router-dom";
+
 import { useState } from "react";
 import Typography from "@mui/material/Typography";
-import image_test from "../img/peakpx4.jpg";
+import image_test from "../img/peakpx5.jpg";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -39,7 +41,7 @@ const SignUp = () => {
           backgroundImage: `url(${image_test})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
+          backgroundPositionX: { xs: "-210px", sm: "center" },
           background: "linear-gradient()",
           boxShadow: "0 0 15px 10px rgba(25, 23, 23,1) inset",
         }}
@@ -66,7 +68,12 @@ const SignUp = () => {
             </Typography>
           </Box>
           {/* <FormControl defaultValue="" required> */}
-          <Container component="form" maxWidth="xs" onSubmit={submitController}>
+          <Container
+            component="form"
+            maxWidth="xs"
+            onSubmit={submitController}
+            autocomplete="off"
+          >
             <TextField
               id="email"
               margin="normal"
@@ -109,10 +116,14 @@ const SignUp = () => {
               type="submit"
               // sx={{ display: "block", mt: 1, borderRadius: "25px" }}
             >
-              Sign In
+              Sign Up
             </Button>
-            <Button href="/signup" sx={{ textTransform: "none", fontSize: 12 }}>
-              Don't have an account yet? SignUp
+            <Button
+              component={RouterLink}
+              to="/signin"
+              sx={{ textTransform: "none", fontSize: 12 }}
+            >
+              Already have an account? Sign In
             </Button>
           </Container>
         </Box>
