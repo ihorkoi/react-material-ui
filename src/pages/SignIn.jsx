@@ -56,7 +56,7 @@ const SignIn = () => {
             borderRadius: "25px",
           }}
         >
-          <Box sx={{ textAlign: "center" }}>
+          <Box sx={{ textAlign: "center", mb: 2 }}>
             <Typography sx={{ fontSize: "19px", lineHeight: "1.2" }}>
               Welcome to
             </Typography>
@@ -79,7 +79,7 @@ const SignIn = () => {
           >
             <TextField
               id="email"
-              margin="normal"
+              // margin="normal"
               name="email"
               type="email"
               variant="outlined"
@@ -87,6 +87,7 @@ const SignIn = () => {
               fullWidth
               size="small"
               autoComplete="off"
+              sx={{ mb: 2 }}
             ></TextField>
             <TextField
               id="password"

@@ -29,7 +29,6 @@ const SignUp = () => {
     <Box
       sx={{
         background: "linear-gradient(rgba(25,23,23, 1), rgba(25,23,23, 0.7))",
-        // background:"radial-gradient(circle, rgba(25, 23, 23,0.7) 0%, rgba(25,23,23,1) 76%, rgba(25,23,23,0.7) 100%);",
       }}
     >
       <Container
@@ -53,7 +52,7 @@ const SignUp = () => {
             borderRadius: "25px",
           }}
         >
-          <Box sx={{ textAlign: "center" }}>
+          <Box sx={{ textAlign: "center", mb: 2 }}>
             <Typography sx={{ fontSize: "19px", lineHeight: "1.2" }}>
               Welcome to
             </Typography>
@@ -67,7 +66,6 @@ const SignUp = () => {
               Plan your workout time with us
             </Typography>
           </Box>
-          {/* <FormControl defaultValue="" required> */}
           <Container
             component="form"
             maxWidth="xs"
@@ -76,46 +74,34 @@ const SignUp = () => {
           >
             <TextField
               id="email"
-              margin="normal"
               name="email"
               type="email"
               variant="outlined"
               label="Email"
               fullWidth
-              InputLabelProps={{}}
-              // InputProps={{ sx: { borderRadius: "1" } }}
               size="small"
               autoComplete="off"
+              sx={{ mb: 1 }}
             ></TextField>
-            {/* </FormControl> */}
             <TextField
-              // margin="dense"
               id="password"
               type="password"
               variant="outlined"
               label="Password"
               fullWidth
-              // InputProps={{ sx: { borderRadius: "25px" } }}
               size="small"
-              sx={{ mb: 2 }}
+              sx={{ mb: 1 }}
             ></TextField>
             <TextField
-              // margin="dense"
               id="password-repeat"
               type="password"
               variant="outlined"
               label="Password"
               fullWidth
-              // InputProps={{ sx: { borderRadius: "25px" } }}
               size="small"
               sx={{ mb: 2 }}
             ></TextField>
-            <Button
-              variant="contained"
-              fullWidth
-              type="submit"
-              // sx={{ display: "block", mt: 1, borderRadius: "25px" }}
-            >
+            <Button variant="contained" fullWidth type="submit">
               Sign Up
             </Button>
             <Button
